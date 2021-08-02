@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.3] - unreleased
+
+- Make internal Zest release based on commit 0b4325782a6fd2c034677b5923041b5df10087ec.  Most important fixes:
+- Do not load SP metadata for IdP metadata (#100)
+  This can cause circular dependencies with service providers that load
+  the identity provider metadata when first used.
+- Add way to deal with missing expiration date (#114)
+  This is a bug in SP, but it seems quite widespread, so allow way to handle this using configuration.
+
+
 ## [0.7.2] - 2020-04-14
 
 Many thanks for major contributions (especially on the testing front where the project was lacking) from [Amertz08](https://github.com/Amertz08) and [askvortsov1](https://github.com/askvortsov1)
